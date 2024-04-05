@@ -43,7 +43,12 @@ const calculateBill = () => {
   const perPersonTotal = total / numberOfPeople;
   // update the perPersonTotal on DOM & show it to user
   perPersonTotalDiv.innerText = `$${perPersonTotal.toFixed(2)}`;
+  billTotalInputDiv.style.backgroundColor = "#8990ec";
 };
+
+function keyDown() {
+  document.getElementById("billTotalInput").style.backgroundColor = "green";
+}
 
 // ** Splits the bill between more people **
 const increasePeople = () => {
